@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Tableau Embed App{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+  <h1 class="display-5 fw-bold">Dashboard & Story Embed</h1>
+  <p class="col-md-8 fs-5">
+    This Flask app embeds a Tableau Public dashboard and a Tableau Public
+    story using Bootstrap-styled pages. Use the navigation bar above, or
+    the buttons below, to view either embed.
+  </p>
+  <div class="d-flex gap-2">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg">View Dashboard</a>
+    <a href="{{ url_for('story') }}" class="btn btn-outline-primary btn-lg">View Story</a>
+  </div>
+</div>
+
+<div class="alert alert-info">
+  <strong>Setup note:</strong> Open <code>templates/dashboard.html</code> and
+  <code>templates/story.html</code> and replace the placeholder
+  <code>&lt;div class='tableauPlaceholder'&gt;</code> blocks with the actual
+  embed code you copied from Tableau Public's "Share" option, as described
+  in the story instructions.
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Story | Tableau Embed App{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Story</h2>
+
+<div class="card shadow-sm">
+  <div class="card-body">
+    <!--
+      REPLACE THE BLOCK BELOW with the embed code copied from
+      Tableau Public -> Share -> Embed Code, for your STORY.
+      It follows the same 'tableauPlaceholder' + <object> + <script>
+      pattern shown in dashboard.html, just pointing at your story name,
+      e.g. param name='name' value='YourWorkbookName/YourStoryName'
+    -->
+
+    <div class="tableauPlaceholder text-center text-muted py-5 border rounded" id="storyPlaceholder">
+      <p class="mb-0">
+        Paste your Tableau Public <strong>Story</strong> embed code here,
+        replacing this placeholder block in
+        <code>templates/story.html</code>.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
